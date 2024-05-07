@@ -12,6 +12,7 @@ import Loading from "./components/loading"
 import Home from "./pages/home"
 import { ThemeProvider } from "./components/theme-provider"
 const About = lazy(() => import("./pages/about"))
+const ProjectsChild = lazy(() => import("./pages/projects-child"))
 const MoreContent = lazy(() => import("./pages/more-content"))
 const Projects = lazy(() => import("./pages/projects"))
 const ErrorPage = lazy(() => import("./pages/error-page"))
@@ -54,6 +55,14 @@ export default function App() {
           element: (
             <Suspense fallback={<Loading />}>
               <MoreContent />
+            </Suspense>
+          )
+        },
+        {
+          path: 'projects/:id',
+          element: (
+            <Suspense fallback={<Loading />}>
+              <ProjectsChild />
             </Suspense>
           )
         }

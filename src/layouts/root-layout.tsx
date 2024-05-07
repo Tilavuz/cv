@@ -5,7 +5,7 @@ export default function RootLayout() {
   return (
     <div>
         <Header />
-        <div className="container pt-44">
+        <div className="container sm:pt-44 pt-32">
           <Outlet />
         </div>   
     </div>

@@ -97,4 +97,9 @@
 
   .navlink.active {
     text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
   }

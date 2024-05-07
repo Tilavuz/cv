@@ -54,7 +54,7 @@ export default function About() {
       <div>
         <h4 className="font-bold mb-4">Contact me</h4>
         <ul className="flex flex-wrap justify-between">
-            <li className="rounded-md hover:border-2 hover:border-black border-2 border-white bg-neutral-100 w-1/2 dark:hover:border-white dark:border-black dark:bg-black dark:text-white">
+            <li className="rounded-md hover:border-2 hover:border-black border-2 border-white bg-neutral-100 w-1/2 dark:hover:border-white dark:border-black dark:bg-slate-800 dark:text-white">
                 <Link to={'mailto:shavqiddintilovov0@gmail.com'} className="flex items-center justify-between p-4">
                     <span className="flex gap-2 items-center">
                         <Mail size={18} />
@@ -63,7 +63,7 @@ export default function About() {
                     <ArrowUpRight size={16} />
                 </Link>
             </li>
-            <li className="rounded-md hover:border-2 hover:border-black dark:hover:border-white dark:border-black border-2 border-white bg-neutral-100 w-1/2 dark:bg-black dark:text-white">
+            <li className="rounded-md hover:border-2 hover:border-black dark:hover:border-white dark:border-black border-2 border-white bg-neutral-100 w-1/2 dark:bg-slate-800 dark:text-white">
                 <Link to={'/'} className="flex items-center justify-between h-full w-full p-4">
                     <span className="flex gap-2 items-center">
                         <Send size={18} />
@@ -72,7 +72,7 @@ export default function About() {
                     <ArrowUpRight size={16} />
                 </Link>
             </li>
-            <li className="rounded-md hover:border-2 hover:border-black border-2 border-white bg-neutral-100 w-1/2 dark:hover:border-white dark:border-black dark:bg-black dark:text-white">
+            <li className="rounded-md hover:border-2 hover:border-black border-2 border-white bg-neutral-100 w-1/2 dark:hover:border-white dark:border-black dark:bg-slate-800 dark:text-white">
                 <Link to={'/'} className="flex items-center justify-between h-full w-full p-4">
                     <span className="flex gap-2 items-center">
                         <Github size={18} />
@@ -81,7 +81,7 @@ export default function About() {
                     <ArrowUpRight size={16} />
                 </Link>
             </li>
-            <li className="rounded-md hover:border-2 hover:border-black border-2 border-white bg-neutral-100 w-1/2 dark:hover:border-white dark:border-black dark:bg-black dark:text-white">
+            <li className="rounded-md hover:border-2 hover:border-black border-2 border-white bg-neutral-100 w-1/2 dark:hover:border-white dark:border-black dark:bg-slate-800 dark:text-white">
                 <Link to={'/'} className="flex items-center justify-between h-full w-full p-4">
                     <span className="flex gap-2 items-center">
                         <Linkedin size={18} />
@@ -90,7 +90,7 @@ export default function About() {
                     <ArrowUpRight size={16} />
                 </Link>
             </li>
-            <li className="rounded-md hover:border-2 hover:border-black border-2 border-white bg-neutral-100 w-1/2 dark:hover:border-white dark:border-black dark:bg-black dark:text-white">
+            <li className="rounded-md hover:border-2 hover:border-black border-2 border-white bg-neutral-100 w-1/2 dark:hover:border-white dark:border-black dark:bg-slate-800 dark:text-white">
                 <Link to={'/'} className="flex items-center justify-between h-full w-full p-4">
                     <span className="flex gap-2 items-center">
                         <Tv2 size={18}/>

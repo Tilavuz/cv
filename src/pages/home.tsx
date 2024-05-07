@@ -6,12 +6,12 @@ export default function Home() {
     const [load, setLoad] = useState<boolean>(false)
     
   return (
-    <main className="select-none slide-up-down">
-        <div className="pb-12">
-            <h1 className="font-bold text-3xl font-mono ">Tilovov Shavqiddin</h1>
+    <main className="select-none slide-up-down pb-24">
+        <div className="sm:pb-12 pb-8">
+            <h1 className="font-bold text-3xl font-mono">Tilovov Shavqiddin</h1>
             <p className="text-base font-thin ">My full name is Tilovov Shavqiddin. I'm a react.js developer</p>
         </div>
-        <div className="flex gap-8 mb-20">
+        <div className="flex gap-8 sm:mb-20 mb-12 flex-wrap sm:flex-nowrap">
             <div className="rounded-full size-28 border flex justify-center items-center ">
                 <img onLoad={() => setLoad(true)} className={`${load ? "rounded-full size-28" : "hidden"}`} src="https://firebasestorage.googleapis.com/v0/b/total-array-422417-i0.appspot.com/o/image-1.jpg?alt=media&token=01dee4e3-bcd7-4df4-94be-593b87ed9aca" alt="image" />
                 <p className={`${load ? "hidden" : "text-2xl font-bold"}`}>TSH</p>

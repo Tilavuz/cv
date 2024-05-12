@@ -28,6 +28,13 @@ export default function ProjectsChild() {
     const [project, setProject] = useState<Project | null>(null)
 
     useEffect(() => {
+      const title = document.getElementsByTagName('title')
+      const link = document.getElementsByTagName('link')
+      link[0].href = `https://tilav.uz/projects/${id}`
+      title[0].innerText = 'Tilav | Project'
+    }, [])
+
+    useEffect(() => {
       const getProject = async () => {
         try {
           const res = await axios.get(url + `/project/${id}`)
@@ -49,7 +56,7 @@ export default function ProjectsChild() {
     <div className="pb-24">
         <div className="mb-8">
             <p className="font-mono text-xl opacity-60">{`${new Date(project.createDate).getDay() < 10 ? "0" + new Date(project.createDate).getDay() : new Date(project.createDate).getDay()}-${new Date(project.createDate).getMonth() < 10 ? "0" + new Date(project.createDate).getMonth() : new Date(project.createDate).getMonth()}-${new Date(project.createDate).getFullYear()}`}</p>
-            <h3 className="uppercase font-thin text-3xl mb-4">New Project</h3>
+            <h1 className="uppercase font-thin text-3xl mb-4">{project.title} <span className="opacity-0">Tilovov Shavqiddin</span></h1>
             <p className="max-w-[600px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, minima magnam optio a consectetur illum perferendis laborum nisi nihil iste eos molestiae tenetur voluptate vel fuga ipsum quam asperiores velit ipsam excepturi ab hic veniam reiciendis ipsa? Officiis, facere asperiores.</p>
         </div>
         <div className="flex flex-col gap-8 mb-8">
@@ -57,7 +64,7 @@ export default function ProjectsChild() {
             project.contents.map(content => {
               return <div key={content._id} className="">
                 <div className="mb-4">
-                  <img onLoad={() => handleLoad(true)} className={`${load ? "w-full h-full" : "hidden"}`} src={content.imgUrl} alt="image" />
+                  <img width={`100%`} height={`100%`} onLoad={() => handleLoad(true)} className={`${load ? "w-full h-full" : "hidden"}`} src={content.imgUrl} alt="image" />
                   <div className={`${!load ? "flex h-[200px] sm:h-[400px] w-full justify-center items-center border-2 bg-slate-300 opacity-45" : ""}`}>
                     {
                       !load && <Image size={120}/> 

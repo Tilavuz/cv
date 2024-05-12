@@ -9,7 +9,7 @@ export default function ProjectCard({ imgUrl, title, desc, createDate, seeMore }
     <div className="flex-wrap items-start gap-6 flex sm:flex-nowrap">
         <div className="max-w-[280px] w-full h-[160px]">
           <Link className={`${load ? "" : "hidden"}`} to={`${seeMore}`}>
-            <img onLoad={() => handleLoad(true)} className="w-full h-full rounded-md dark:shadow dark:shadow-white" src={imgUrl} alt={`${title}' image`} />
+            <img title="project image" loading="eager" width={`100%`} height={`100%`} onLoad={() => handleLoad(true)} className="w-full h-full rounded-md dark:shadow dark:shadow-white" src={imgUrl} alt={`${title}' image`} />
           </Link>
           <div className={`${!load ? "flex max-w-[600px] max-h-[500px] w-full h-full justify-center items-center border-2 bg-slate-300 opacity-45" : ""}`}>
             {
@@ -18,7 +18,7 @@ export default function ProjectCard({ imgUrl, title, desc, createDate, seeMore }
           </div>
         </div>
         <div className="">
-            <h5 className="font-bold">{`${title}`}</h5>
+            <h2 className="font-bold">{`${title}`}</h2>
             <p className="font-thin text-sm">{createDate}</p>
             <p className="max-w-[370px] line-clamp-4 tracking-widest">{desc}</p>
         </div>

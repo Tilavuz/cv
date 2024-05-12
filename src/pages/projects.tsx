@@ -24,6 +24,13 @@ export default function Projects() {
   const { loading, handleLoading } = useLoading()
 
   useEffect(() => {
+    const title = document.getElementsByTagName('title')
+    const link = document.getElementsByTagName('link')
+    link[0].href = 'https://tilav.uz/projects'
+    title[0].innerText = 'Tilav | Projects'
+  }, [])
+
+  useEffect(() => {
     const getProjects = async () => {
       try {
         const res = await axios.get(url + "/projects")
@@ -40,7 +47,7 @@ export default function Projects() {
   return loading ? <Loading /> : (
     <div className="slide-up-down pb-24">
       <div className="sm:mb-12 mb-8">
-        <h4 className="font-bold text-4xl">Projects</h4>
+        <h1 className="font-bold text-4xl">Projects</h1>
         <p className="font-thin">My independent projects</p>
       </div>
       {

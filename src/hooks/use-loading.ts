@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function useLoading() {
-    const [loading, setLoading] = useState<Boolean>(true)
+    const [loading, setLoading] = useState<boolean>(true)
     function handleLoading() {
         setLoading(false)
     }

@@ -32,7 +32,7 @@ export default function ProjectsChild() {
       const link = document.getElementsByTagName('link')
       link[0].href = `https://tilav.uz/projects/${id}`
       title[0].innerText = 'Tilav | Project'
-    }, [])
+    }, [id])
 
     useEffect(() => {
       const getProject = async () => {
@@ -45,9 +45,8 @@ export default function ProjectsChild() {
           handleLoading()
         }
       }
-
       getProject()
-    }, [])
+    }, [id, handleLoading])
 
 
     

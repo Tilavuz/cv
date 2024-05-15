@@ -42,7 +42,7 @@ export default function Projects() {
       }
     }
     getProjects()
-  }, [])
+  }, [handleLoading])
 
   return loading ? <Loading /> : (
     <div className="slide-up-down pb-24">
